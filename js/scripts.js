@@ -18,25 +18,28 @@ function Game(player1, player2){
 
 Player.prototype.toss = function(){
    var randomDice = Math.floor((Math.random() *6))+1;
-   return randomDice;
-   //return this.scoreCheck(randomDice);
-  
-}
-Player.prototype.scoreCheck = function(num1) {
-   // var scoreChange = this.tempScore = 0;
+   // return randomDice ;
+   this.roll = randomDice;
+   this.scoreCheck();
+   // return this.scoreCheck(randomDice);
    
-   if(num1 === 1) {
+}
+Player.prototype.scoreCheck = function() {
+   // var scoreChange = this.tempScore = 0;
+   console.log(this.roll + "---")
+
+   if(this.roll === 1) {
    //  return this.hold(scoreChange);
       this.tempScore = 0 ; 
      alert(this.playerName + ", your turn is over, pass the mouse!");
-   }else{
-       this.tempScore += num1;
-       
-    }
+   } else {
+     this.tempScore += this.roll;
+   }
+   console.log(this)
 }
-Player.prototype.hold = function(num){
-  this.score += this.tempScore;
-  this.tempScore = 0;
+
+Player.prototype.hold = function(){
+   this.tempScore +=0;
 }
 
 
@@ -48,18 +51,18 @@ $(document).ready(function(){
       event.preventDefault();
       var name1 = $("#player1").val();
       var name2 = $("#player2").val();
-      newPlayer1 = new Player(name1);
+      newPlayer1 = new Player(name1,true);
       newPlayer2 = new Player(name2);
       newGame = new Game(newPlayer1, newPlayer2);
       // console.log(newPlayer1);
       // console.log(newPlayer2);
-      // console.log(newGame);
+      console.log(newGame);
    });   
    $("#play").click(function() {
       console.log(newPlayer1);
-      player1.roll = newPlayer1.toss();
+      newPlayer1.toss();
        
-      console.log(num + " num");
+     
       var inputNumber = newPlayer1.scoreCheck();
       console.log("inputNumber " + inputNumber)
       var result1 = newPlayer1.hold(inputNumber);
