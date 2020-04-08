@@ -1,12 +1,12 @@
- # _Pig Dice Game _
+ # _Pig Dice Game_
 
-#### _Practice with constructors, prototypes, objects, properties, methods, jQuery and DOM manipulation and traversal. _
+#### _Practice with constructors, prototypes, objects, properties, methods, jQuery and DOM manipulation and traversal._
 
 #### By _Mailie and Nitun Datta - April 8, 2020_
 
 ## Description
 
-### _An exercise for using constructor and prototype.When a user will click on any specific place,details will show up _
+### _This web application allow two player to play Pig Dice Game_
 
 ## Setup/Installation Requirements
 
@@ -18,9 +18,14 @@
 * https://github.com/StevenLy369/Places-ive-been
 
 ## specs
-1. Click on any specific place,all attribute will show up.
-2. Example Input=Mexico
-   Output:Tulum, Chichen itza,Feb 18,2020,Chichén Itzá is a complex of Mayan ruins on Mexico's Yucatán Peninsula.  
+| Behavior        | Input           | Outcome  |
+| ------------- |:-------------:| -----:|
+| Player 1 inputs name and Player 2 inputs name, and clicks start button | Player 1: Olivia / Player 2: Matt / Click START | Goes to game console |
+| Player 1 clicks ROLL button | Click ROLL button | Dice rolls and number is generated
+| If Player 1 rolls any number other than 1, that roll is added to round total | Roll = 2 | Round total = 2 |
+| If Player 1 rolls a 1, no score is added and round for Player 1 ends | Roll = 1 | Round total = 2 / Total score = 2 / Player 2 begins |
+| Repeat for Player 2 | Roll = 1 | Round total = 0 / Total score = 0 / Player 1 begins |
+| When a player's total score reaches 100 or more, game ends and winner page shows | Player 1 total score = 100 | Winner page |
 
 
 ## Known Bugs
