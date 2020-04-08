@@ -1,39 +1,33 @@
-$(document).ready(function(){
-
-    $("#mexico").click(function(){
-      var mexico = new Place("Tulum","Chichen itza","Feb 18,2020","Chichén Itzá is a complex of Mayan ruins on Mexico's Yucatán Peninsula.");
-      var mexicoInfo = ( "Location: " + mexico.location +"</br>"+
-                       " Landmark: " + mexico.landmarks +"</br>"+
-                       " Time of Year: " + mexico.timeOfYear +"</br>"+
-                       "Note: " + mexico.notes)
-       $("#mexicoInfo").html(mexicoInfo).fadeToggle("slow");
-    })
-    $("#disney").click(function(){
-      var disney = new Place("California" , "Magic Kingdom", "March 8 2020", "Lines were long." );
-      var disneyInfo = ( " Location " + disney.location + "</br>" +
-                         " Landmark: " + disney.landmarks + "</br>" + 
-                         "Time of Year: " + disney.timeOfYear + "</br>" + 
-                         "Notes:  " + disney.notes)
-                         
-      $("#disneyInfo").html(disneyInfo).fadeToggle("slow");
-   })
-
-   $("#mtRainier").click(function(){
-      var mtRainier = new Place("Washington", "Mountain", "June 3 2015", "Beautiful Mountain.");
-      var mtRainierInfo = ( " Location " + mtRainier.location + "</br>" +
-                         " Landmark: " + mtRainier.landmarks + "</br>" + 
-                         "Time of Year: " + mtRainier.timeOfYear + "</br>" + 
-                         "Notes:  " + mtRainier.notes)
-                           
-    $("#mtRainierInfo").html(mtRainierInfo).fadeToggle("slow");
- })
-});
-
-function Place(location, landmarks, timeOfYear, notes){
-   this.location = location;
-   this.landmarks = landmarks;
-   this.timeOfYear = timeOfYear;
-   this.notes = notes;
+// business logic
+function Player(name) {
+   this.name = name,
+   this.score = 0;
 }
 
+function Game(player1, player2){
+   this.player1 = player1
+   this.player2 = player2
+   this.currentPlayer 
+   this.winner
+}
+
+
+
+// user interface logic
+
+$(document).ready(function(){
+   $("#player-input").submit(function(event){
+      event.preventDefault();
+      var name1 = $("#player1").val();
+      var name2 = $("#player2").val();
+      console.log(player1 + " " + player2);
+      var newPlayer1 = new Player(name1);
+      var newPlayer2 = new Player(name2);
+      var newGame = new Game(newPlayer1, newPlayer2);
+      console.log(newPlayer1);
+      console.log(newPlayer2);
+      console.log(newGame);
+    });   
+   
+});
 
