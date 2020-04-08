@@ -14,8 +14,8 @@
 * Navigate to index.html file.
 * Right click and open in the browser of your choice.
 
-* Alternatively, open the webpage at https://github.com/nitundatta8/Places-I-have-Been.git
-* https://github.com/StevenLy369/Places-ive-been
+* Alternatively, open the webpage at https://github.com/nitundatta8/pig-dice-game.git
+*
 
 ## specs
 | Behavior        | Input           | Outcome  |
@@ -34,7 +34,7 @@
 
 ## Support and contact details
 
-If you have any suggestions or questions please email us at nitundatta8@gmail.com or steven.ly369@gmail.com
+If you have any suggestions or questions please email us at nitundatta8@gmail.com or 
 
 ## Technologies Used
 
